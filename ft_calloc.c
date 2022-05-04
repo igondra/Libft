@@ -23,7 +23,7 @@ void	*ft_calloc (size_t count, size_t size)
 	return (dest);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	size_t	count1;
 	size_t	size1;
@@ -33,4 +33,4 @@ int	main(void)
 	count1 = 3;
 	size1 = 4;
 	printf("Funcion calloc: %s	Funcion ft_calloc: %s", calloc(count1, size1), ft_calloc(count1, size1));
-}
+} */

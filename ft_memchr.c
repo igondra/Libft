@@ -26,7 +26,7 @@ void	*ft_memchr (const void *s, int c, size_t n)
 	return (0);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	const char str[] = "AndrEider";
 	int 	coincidence;
@@ -41,4 +41,4 @@ int	main(void)
 	solution_ft = memchr(str, coincidence, size);
 	printf("memchr funcion: %s\n", solution_ft);
 	return (0);
-}
+} */

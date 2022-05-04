@@ -30,7 +30,7 @@ int	ft_strncmp (const char *s1, const char *s2, size_t n)
 	return (0);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char str1[] = "AndrEider";
 	char str2[] = "AndrElder";
@@ -44,4 +44,4 @@ int	main(void)
 	comp = strncmp(str1, str2, size);
 	printf("strncmp funcion: %d\n", comp);
 	return (0);
-}
+} */

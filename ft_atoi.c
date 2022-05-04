@@ -38,7 +38,8 @@ int	ft_atoi (const char *str)
 	}
 	return ((int)(res * sign));
 }
-int main(void)
+
+/* int main(void)
 {
 	char *s = " 98764 987";
 
@@ -59,4 +60,4 @@ int main(void)
 	
 	printf("Funcion ft_atoi:%d	Funcion atoi: %d\n", ft_atoi(s5), atoi(s5));
 	return (0);
-}
+} */

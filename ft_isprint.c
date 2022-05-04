@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: igondra- <igondra-@student.42.fr           +#+  +:+       +#+        */
+/*   By: igondra- <igondra-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 12:41:15 by igondra-          #+#    #+#             */
 /*   Updated: 2022/05/03 12:41:15 by igondra-         ###   ########.fr       */
@@ -19,7 +19,7 @@ int	ft_isprint (int c)
 	return (1);
 }
 
-int	main (void)
+/* int	main (void)
 {
 	int c;
 	
@@ -49,4 +49,4 @@ int	main (void)
 		printf("Test con %c: OK		Resultado funcion original: %d  Resultado funcion ft: %d\n", c, isprint(c), ft_isprint(c));
 	else
 		printf("Test con %c: NOK		Resultado funcion original: %d  Resultado funcion ft: %d\n", c, isprint(c), ft_isprint(c));	
-}
+} */

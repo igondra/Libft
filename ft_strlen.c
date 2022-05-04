@@ -24,7 +24,7 @@ size_t	ft_strlen (const char *str)
 	return (length);
 }
 
-int	main (void)
+/* int	main (void)
 {
 	char string[] = "Hola";
 	
@@ -51,4 +51,4 @@ int	main (void)
 		printf("Test con %s: OK		Resultado funcion original: %d  Resultado funcion ft: %d\n", string3, strlen(string3), ft_strlen(string3));
 	else
 		printf("Test con %s: NOK		Resultado funcion original: %d  Resultado funcion ft: %d\n", string3, strlen(string3), ft_strlen(string3));
-}
+} */

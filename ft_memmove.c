@@ -20,9 +20,7 @@ void 	*ft_memmove	(void *dst, const void *src, size_t len)
 	if (dst > src)
 	{
     	while (len--)
-    	{
         	((unsigned char *)dst)[len] = ((const char *)src)[len];
-    	}
 	}
 	else if (dst < src)
 	{
@@ -35,7 +33,7 @@ void 	*ft_memmove	(void *dst, const void *src, size_t len)
 	return (dst);
 }
 
-int	main (void)
+/* int	main (void)
 {
 	char	string_src[] = "HolaHola";
 	char	string_dst[] = "Agur a todos";
@@ -49,4 +47,4 @@ int	main (void)
 	printf("Resultado funcion original: %s  Resultado funcion ft: %s\n", string_dst, string_ft_dst);
 
 	return (0);
-}
+} */

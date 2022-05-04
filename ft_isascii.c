@@ -1,9 +1,9 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                         :+:      :+:    :+:   */
+/*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: igondra- <igondra-@student.42urduliz.co    +#+  +:+       +#+        */
+/*   By: igondra- <igondra-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 12:35:59 by igondra-          #+#    #+#             */
 /*   Updated: 2022/05/03 12:35:59 by igondra-         ###   ########.fr       */
@@ -19,7 +19,7 @@ int	ft_isascii (int c)
 	return (1);
 }
 
-int	main (void)
+/* int	main (void)
 {
 	int c;
 	
@@ -49,4 +49,4 @@ int	main (void)
 		printf("Test con %c: OK		Resultado funcion original: %d  Resultado funcion ft: %d\n", c, isascii(c), ft_isascii(c));
 	else
 		printf("Test con %c: NOK		Resultado funcion original: %d  Resultado funcion ft: %d\n", c, isascii(c), ft_isascii(c));	
-}
+} */

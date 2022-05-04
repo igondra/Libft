@@ -24,7 +24,7 @@ void	ft_bzero (void *s, size_t n)
 	}
 }
 
-int	main (void)
+/* int	main (void)
 {
 	char string[] = "Hola";
 	char string_ft[] = "Hola";
@@ -51,4 +51,4 @@ int	main (void)
 	ft_bzero(string2_ft, 10);
 	printf("	Resultado funcion original: %s  Resultado funcion ft: %s\n", string2, string2_ft);
 	return (0);
-}
+} */

@@ -26,7 +26,7 @@ void	*ft_memcpy (void *restrict dst, const void *restrict src, size_t n)
 	return (dst);
 }
 
-int	main (void)
+/* int	main (void)
 {
 	char	string_src[] = "HolaHola";
 	char	string_dst[] = "Agur a todos";
@@ -40,4 +40,4 @@ int	main (void)
 	printf("Resultado funcion original: %s  Resultado funcion ft: %s\n", string_dst, string_ft_dst);
 
 	return (0);
-}
+} */

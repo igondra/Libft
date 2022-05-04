@@ -32,10 +32,10 @@ char	*ft_strdup (const char *s1)
 	return (s1_new);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char	*str1 = "Kaixo Agur";
 	char	*str_dup;
 
 	printf("Funcion strdup = %s	Funcion ft_strdup = %s", strdup(str1), ft_strdup(str1));
-}
+} */

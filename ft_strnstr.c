@@ -34,7 +34,7 @@ char	*ft_strnstr (const char *haystack, const char *needle, size_t len)
 	return (NULL);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char 	str_haystack[] = "Hola mi nombre es AndrEider";
 	char 	str_needle[] = "nombre";
@@ -48,4 +48,4 @@ int	main(void)
 	solution = strnstr(str_haystack, str_needle, size);
 	printf("memcmp funcion: %s\n", solution);
 	return (0);
-}
+} */

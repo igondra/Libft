@@ -19,7 +19,7 @@ int ft_tolower(int c)
 	return (c);
 }
 
-int main(void)
+/* int main(void)
 {
 	int c;
 
@@ -34,4 +34,4 @@ int main(void)
 	c = '3';
 	printf("Letra original:%c	Letra en minuscula:%c\n", c, ft_tolower(c));
 	return (0);
-}
+} */

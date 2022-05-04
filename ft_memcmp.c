@@ -30,7 +30,7 @@ int ft_memcmp (const void *s1, const void *s2, size_t n)
 	return (0);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char str1[] = "AndrEider";
 	char str2[] = "AndrEader";
@@ -44,4 +44,4 @@ int	main(void)
 	comp = memcmp(str1, str2, size);
 	printf("memcmp funcion: %d\n", comp);
 	return (0);
-}
+} */

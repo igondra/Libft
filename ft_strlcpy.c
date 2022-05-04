@@ -33,7 +33,7 @@ size_t	ft_strlcpy (char *dst, const char *src, size_t dstsize)
 return (length);
 }
 
-int	main (void)
+/* int	main (void)
 {
 	char	string_src[] = "HolaHola";
 	char	string_dst[] = "Agur a todos";
@@ -50,4 +50,4 @@ int	main (void)
 	printf("Resultado función original size: %d	Resultado función ft size: %d\n", size, size_ft);
 
 	return (0);
-}
+} */

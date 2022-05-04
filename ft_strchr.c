@@ -30,7 +30,7 @@ char	*ft_strchr (const char *s, int c)
 	return (0);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	const char str[] = "AndrEider";
 	int 	coincidence;
@@ -43,4 +43,4 @@ int	main(void)
 	solution_ft = strchr(str, coincidence);
 	printf("strchr funcion: %s\n", solution_ft);
 	return (0);
-}
+} */

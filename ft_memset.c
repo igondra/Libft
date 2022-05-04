@@ -25,7 +25,7 @@ void	*ft_memset (void *str, int c, size_t n)
 	return (str);
 }
 
-int	main (void)
+/* int	main (void)
 {
 	char string[] = "Hola";
 	char string_ft[] = "Hola";
@@ -51,4 +51,4 @@ int	main (void)
 	memset(string2, '-', 10);
 	ft_memset(string2_ft, '-', 10);
 	printf("	Resultado funcion original: %s  Resultado funcion ft: %s\n", string2, string2_ft);
-}
+} */
