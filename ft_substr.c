@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_strsub(char const *s, unsigned int start, size_t len)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
     char    *strsub;
 
@@ -34,7 +34,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 
     length = 7;
     empieza = 7;
-    substring = ft_strsub(string, empieza, length);
-    printf("Funcion ft_strsub: %s\n", substring);
+    substring = ft_substr(string, empieza, length);
+    printf("Funcion ft_substr: %s\n", substring);
     return (0);
 } */
