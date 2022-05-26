@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igondra- <igondra-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 11:35:50 by igondra-          #+#    #+#             */
-/*   Updated: 2022/05/26 15:40:45 by igondra-         ###   ########.fr       */
+/*   Created: 2022/05/19 11:04:31 by igondra-          #+#    #+#             */
+/*   Updated: 2022/05/20 11:59:50 by igondra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	void	*dest;
+	t_list	*lst_result;
+	t_list	*lst_new;
 
-	dest = malloc(size * count);
-	if (!dest)
+	if (!lst && !*del && !*f)
+	{
 		return (NULL);
-	memset(dest, 0, size * count);
-	return (dest);
+	}
+	lst_result = NULL;
+	while (lst)
+	{
+		lst_new = ft_lstnew((*f)(lst->content));
+		ft_lstadd_back(&lst_result, lst_new);
+		lst = lst->next;
+	}
+	return (lst_result);
 }
-
-/* int	main(void)
-{
-	size_t	count1;
-	size_t	size1;
-	char	*lol;
-	char	*lol_ft;
-
-	count1 = 3;
-	size1 = 4;
-	printf("Funcion calloc: %s	Funcion ft_calloc: %s" \\
-	, calloc(count1, size1), ft_calloc(count1, size1));
-} */

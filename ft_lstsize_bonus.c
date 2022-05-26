@@ -1,44 +1,48 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igondra- <igondra-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 10:03:16 by igondra-          #+#    #+#             */
-/*   Updated: 2022/05/05 14:15:53 by igondra-         ###   ########.fr       */
+/*   Created: 2022/05/18 16:25:14 by igondra-          #+#    #+#             */
+/*   Updated: 2022/05/20 11:59:57 by igondra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_lstsize(t_list *lst)
 {
-	int		i;
-	char	*str;
+	int	listsize;
 
-	str = (char *)s;
-	i = ft_strlen(str);
-	while (i >= 0)
+	listsize = 0;
+	while (lst != NULL)
 	{
-		if (str[i] == (char)c)
-			return (&str[i]);
-		i--;
+		lst = lst->next;
+		listsize++;
 	}
-	return (0);
+	return (listsize);
 }
 
 /* int	main(void)
 {
-	const char str[] = "AndrEider";
-	int 	coincidence;
-	char	*solution;
-	char	*solution_ft;
+	t_list	*lista;
+	t_list	*lista1;
+	t_list	*lista2;
 
-	coincidence = 'd';
-	solution = ft_strrchr(str, coincidence);
-	printf("ft_strrchr funcion: %s\n", solution);
-	solution_ft = strrchr(str, coincidence);
-	printf("strrchr funcion: %s\n", solution_ft);
+	lista = malloc(sizeof(*lista));
+	lista1 = malloc(sizeof(*lista1));
+	lista2= malloc(sizeof(*lista2));
+
+	lista->next = lista1;
+	lista1->next = lista2;
+	lista2->next = NULL;
+
+	printf("El size de la lista es de: %d\n", ft_lstsize(lista));
+
+	free(lista);
+	free(lista1);
+	free(lista2);
 	return (0);
 } */

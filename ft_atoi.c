@@ -6,22 +6,21 @@
 /*   By: igondra- <igondra-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 11:22:31 by igondra-          #+#    #+#             */
-/*   Updated: 2022/05/04 11:22:31 by igondra-         ###   ########.fr       */
+/*   Updated: 2022/05/05 13:40:26 by igondra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi (const char *str)
+int	ft_atoi(const char *str)
 {
 	long			res;
 	long			sign;
 	unsigned int	i;
- 
+
 	res = 0;
 	sign = 1;
 	i = 0;
-
 	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n'
 		|| str[i] == '\r' || str[i] == '\v' || str[i] == '\f')
 		i++;

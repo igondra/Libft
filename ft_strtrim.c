@@ -5,37 +5,52 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: igondra- <igondra-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 16:25:37 by igondra-          #+#    #+#             */
-/*   Updated: 2022/05/04 16:25:37 by igondra-         ###   ########.fr       */
+/*   Created: 2022/05/26 15:32:31 by igondra-          #+#    #+#             */
+/*   Updated: 2022/05/26 15:34:55 by igondra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim (char const *s1, char const *set)
+static size_t	ft_check_char(char c, char const *set)
 {
-	char	*str_trim;
-	size_t	str_trim_size;
-	size_t	cnt_start;
+	size_t	i;
 
-	cnt_start = 0;
-	while (ft_strchr(set, s1[cnt_start]))
-		cnt_start++;
-	str_trim_size = ft_strlen(s1);
-	while (ft_strchr(set, s1[str_trim_size]))
-		str_trim_size--;
-	str_trim = (char *)malloc(sizeof(char) * (str_trim_size - cnt_start + 1));
-	str_trim = ft_strsub(s1, cnt_start, str_trim_size - cnt_start + 1);
-	return(str_trim);
+	i = 0;
+	while (set[i])
+	{
+		if (set[i] == c)
+			return (1);
+		i++;
+	}
+	return (0);
 }
 
-int main(void)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char s1[] = "lorem ipsum dolor sit amet";
-	char set[] = "taoelm";
+	char	*str;
+	size_t	i;
+	size_t	start;
+	size_t	end;
 
-	printf("Esaldia osorik = %s\n", s1);
-	printf("Esalditik kendu behar dena = %s\n", set);
-	printf("Esaldia laburtuta = %s\n", ft_strtrim(s1, set));
-	return (0);
+	if (!s1 || !set)
+		return (NULL);
+	start = 0;
+	while (s1[start] && ft_check_char(s1[start], set))
+	{
+		start++;
+	}
+	end = ft_strlen(s1);
+	while (end > start && ft_check_char(s1[end - 1], set))
+	{
+		end--;
+	}
+	str = (char *)malloc(sizeof(*s1) * (end - start + 1));
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (start < end)
+		str[i++] = s1[start++];
+	str[i] = 0;
+	return (str);
 }

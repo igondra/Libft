@@ -6,16 +6,18 @@
 /*   By: igondra- <igondra-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 09:50:30 by igondra-          #+#    #+#             */
-/*   Updated: 2022/05/04 09:50:30 by igondra-         ###   ########.fr       */
+/*   Updated: 2022/05/05 13:56:58 by igondra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
- 
-int ft_toupper(int c)
+
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
+	{
 		c = c - 32;
+	}
 	return (c);
 }
 

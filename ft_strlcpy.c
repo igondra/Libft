@@ -6,16 +6,16 @@
 /*   By: igondra- <igondra-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 09:32:16 by igondra-          #+#    #+#             */
-/*   Updated: 2022/05/04 09:32:16 by igondra-         ###   ########.fr       */
+/*   Updated: 2022/05/05 14:08:19 by igondra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy (char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t counter;
-	size_t length;
+	size_t	counter;
+	size_t	length;
 
 	counter = 0;
 	length = 0;
@@ -30,7 +30,7 @@ size_t	ft_strlcpy (char *dst, const char *src, size_t dstsize)
 		}
 		dst[counter] = '\0';
 	}
-return (length);
+	return (length);
 }
 
 /* int	main (void)
@@ -43,11 +43,14 @@ return (length);
 	size_t	size_ft;
 	
 	printf("Funcion ft_strlcpy\n");
-	printf("Test con source: %s		y con destino: %s\n", string_src, string_dst);
+	printf("Test con source: %s		y con destino: %s\n", \\
+	string_src, string_dst);
 	size = strlcpy(string_dst, string_src, 5);
 	size_ft = ft_strlcpy(string_ft_dst, string_ft_src, 5);
-	printf("Resultado funcion original: %s  Resultado funcion ft: %s\n", string_dst, string_ft_dst);
-	printf("Resultado función original size: %d	Resultado función ft size: %d\n", size, size_ft);
+	printf("Resultado funcion original: %s  Resultado \\
+	funcion ft: %s\n", string_dst, string_ft_dst);
+	printf("Resultado función original size: %d	Resultado \\
+	función ft size: %d\n", size, size_ft);
 
 	return (0);
 } */

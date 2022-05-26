@@ -1,37 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igondra- <igondra-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 11:35:50 by igondra-          #+#    #+#             */
-/*   Updated: 2022/05/26 15:40:45 by igondra-         ###   ########.fr       */
+/*   Created: 2022/05/10 00:36:32 by igondra-          #+#    #+#             */
+/*   Updated: 2022/05/20 11:57:11 by igondra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	void	*dest;
+	size_t	i;
 
-	dest = malloc(size * count);
-	if (!dest)
-		return (NULL);
-	memset(dest, 0, size * count);
-	return (dest);
+	i = 0;
+	if (!s || !f)
+		return ;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
 
-/* int	main(void)
+/* void	ft_change(unsigned int i, char *str)
 {
-	size_t	count1;
-	size_t	size1;
-	char	*lol;
-	char	*lol_ft;
+		*str = *str + i;
+}
 
-	count1 = 3;
-	size1 = 4;
-	printf("Funcion calloc: %s	Funcion ft_calloc: %s" \\
-	, calloc(count1, size1), ft_calloc(count1, size1));
+int	main(void)
+{
+	char	string[] = "Holaaaagurrrr";
+	printf("string sin modificar = %s\n", string);
+	ft_striteri(string, ft_change);
+	printf("string modificada = %s\n", string);
+	return(0);
 } */

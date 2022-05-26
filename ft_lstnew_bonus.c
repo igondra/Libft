@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igondra- <igondra-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 11:35:50 by igondra-          #+#    #+#             */
-/*   Updated: 2022/05/26 15:40:45 by igondra-         ###   ########.fr       */
+/*   Created: 2022/05/18 13:24:42 by igondra-          #+#    #+#             */
+/*   Updated: 2022/05/20 11:59:38 by igondra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+t_list	*ft_lstnew(void *content)
 {
-	void	*dest;
+	t_list	*list;
 
-	dest = malloc(size * count);
-	if (!dest)
+	list = malloc(sizeof(*list));
+	if (!list)
 		return (NULL);
-	memset(dest, 0, size * count);
-	return (dest);
+	list->content = content;
+	list->next = NULL;
+	return (list);
 }
 
 /* int	main(void)
 {
-	size_t	count1;
-	size_t	size1;
-	char	*lol;
-	char	*lol_ft;
+	char	str[] = "lorem ipsum dolor sit";
 
-	count1 = 3;
-	size1 = 4;
-	printf("Funcion calloc: %s	Funcion ft_calloc: %s" \\
-	, calloc(count1, size1), ft_calloc(count1, size1));
+	t_list  *elem;
+
+	elem = ft_lstnew((void *)str);
+	printf("Contenido (content) del nodo creado: %s\n", elem->content);
+	printf("Siguiente nodo (next) del nodo creado: %s\n", elem->next);
 } */

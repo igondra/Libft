@@ -6,16 +6,18 @@
 /*   By: igondra- <igondra-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 09:50:30 by igondra-          #+#    #+#             */
-/*   Updated: 2022/05/04 09:50:30 by igondra-         ###   ########.fr       */
+/*   Updated: 2022/05/05 13:57:06 by igondra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
- 
-int ft_tolower(int c)
+
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
+	{
 		c = c + 32;
+	}
 	return (c);
 }
 

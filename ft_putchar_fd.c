@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igondra- <igondra-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/04 11:35:50 by igondra-          #+#    #+#             */
-/*   Updated: 2022/05/26 15:40:45 by igondra-         ###   ########.fr       */
+/*   Created: 2022/05/06 11:22:34 by igondra-          #+#    #+#             */
+/*   Updated: 2022/05/20 11:56:04 by igondra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	ft_putchar_fd(char c, int fd)
 {
-	void	*dest;
-
-	dest = malloc(size * count);
-	if (!dest)
-		return (NULL);
-	memset(dest, 0, size * count);
-	return (dest);
+	write(fd, &c, 1);
 }
 
-/* int	main(void)
+/* int main(void)
 {
-	size_t	count1;
-	size_t	size1;
-	char	*lol;
-	char	*lol_ft;
+    char    c;
 
-	count1 = 3;
-	size1 = 4;
-	printf("Funcion calloc: %s	Funcion ft_calloc: %s" \\
-	, calloc(count1, size1), ft_calloc(count1, size1));
+    c = 'D';
+    ft_putchar_fd(c, 1);
 } */

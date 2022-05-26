@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strndup.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: igondra- <igondra-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 11:46:39 by igondra-          #+#    #+#             */
-/*   Updated: 2022/05/04 11:46:39 by igondra-         ###   ########.fr       */
+/*   Updated: 2022/05/05 14:07:37 by igondra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup (const char *s1)
+char	*ft_strdup(const char *s1)
 {
 	int		cont;
 	char	*s1_new;
@@ -21,9 +21,9 @@ char	*ft_strdup (const char *s1)
 	size = ft_strlen(s1);
 	s1_new = malloc(sizeof(char) * size + 1);
 	if (!s1_new)
-		return (NULL);  
+		return (NULL);
 	cont = 0;
-	while(s1[cont] != '\0')
+	while (s1[cont] != '\0')
 	{
 		s1_new[cont] = s1[cont];
 		cont++;
@@ -37,5 +37,6 @@ char	*ft_strdup (const char *s1)
 	char	*str1 = "Kaixo Agur";
 	char	*str_dup;
 
-	printf("Funcion strdup = %s	Funcion ft_strdup = %s", strdup(str1), ft_strdup(str1));
+	printf("Funcion strdup = %s	Funcion \\
+	ft_strdup = %s", strdup(str1), ft_strdup(str1));
 } */
