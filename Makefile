@@ -6,7 +6,7 @@
 #    By: igondra- <igondra-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/21 22:42:29 by igondra-          #+#    #+#              #
-#    Updated: 2022/05/26 16:28:05 by igondra-         ###   ########.fr        #
+#    Updated: 2022/05/26 17:16:50 by igondra-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,14 +39,13 @@ $(OBJECTS): $(SRCS)
 	gcc $(CFLAGS) -c $(SRCS)
 
 bonus: $(OBJECTS) $(BONUS_OBJECTS)
-
 	ar rc $(NAME) $(OBJECTS) $(BONUS_OBJECTS)
 
 clean:
-	@rm -f $(OBJECTS)
+	rm -f $(OBJECTS)
 
 fclean: clean
-	@rm -f $(NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
