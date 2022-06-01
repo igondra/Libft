@@ -6,7 +6,7 @@
 /*   By: igondra- <igondra-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 11:35:50 by igondra-          #+#    #+#             */
-/*   Updated: 2022/05/26 15:40:45 by igondra-         ###   ########.fr       */
+/*   Updated: 2022/06/01 12:56:19 by igondra-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t count, size_t size)
 	dest = malloc(size * count);
 	if (!dest)
 		return (NULL);
-	memset(dest, 0, size * count);
+	ft_memset(dest, 0, size * count);
 	return (dest);
 }
 
