@@ -6,7 +6,7 @@
 #    By: igondra- <igondra-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/21 22:42:29 by igondra-          #+#    #+#              #
-#    Updated: 2022/05/26 17:16:50 by igondra-         ###   ########.fr        #
+#    Updated: 2022/05/26 20:34:14 by igondra-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,24 +28,27 @@ BONUS =	ft_lstadd_back_bonus.c ft_lstadd_front_bonus.c ft_lstclear_bonus.c \
 
 BONUS_OBJECTS = $(BONUS:.c=.o)
 
+INCLUDE = libft.h
+
+.c.o: $(SRCS)
+	@gcc $(CFLAGS) -c -o $@ $<
+
 CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
+	gcc $(CFLAGS) -c $(SRCS) -I$(INCLUDE)
 	ar rc $(NAME) $(OBJECTS)
-
-$(OBJECTS): $(SRCS)
-	gcc $(CFLAGS) -c $(SRCS)
 
 bonus: $(OBJECTS) $(BONUS_OBJECTS)
 	ar rc $(NAME) $(OBJECTS) $(BONUS_OBJECTS)
 
 clean:
-	rm -f $(OBJECTS)
+	@rm -f $(OBJECTS)
 
 fclean: clean
-	rm -f $(NAME)
+	@rm -f $(NAME)
 
 re: fclean all
 
